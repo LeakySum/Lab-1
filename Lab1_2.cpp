@@ -12,62 +12,62 @@ int main()
     int unit1, unit2;
 
     cin >>unit1;
-    cout << "enter the length: "; //Потом пользователь должен ввести размер длинны
+    cout << "enter the length: " << endl; //Потом пользователь должен ввести размер длинны
     double x, y, z;
     cin >>x;
 
-    cout << "\nEnter the desired Unit:\n1-Kilometer\n2-meter\n3-centimeter\n4-millimeter" << endl;
+    cout << "Enter the desired Unit:\n1-kilometer\n2-meter\n3-centimeter\n4-millimeter" << endl ;
     cin >>unit2;
 
     switch (unit1) {//введенная ед. из. переводится в метры для удобства подсчета
         case 1: {
-            cout << "Kilometer-" << x;
+            cout  << x << " kilometer";
             y=x*1000;
             break;
         }
         case 2: {
-            cout << "meter-" << x;
+            cout  << x << " meter";
             y=x;
             break;
         }
         case 3: {
-            cout << "centimeter-" << x;
+            cout << " centimeter " << x;
             y=x/100;
             break;
         }
         case 4: {
-            cout << "millimeter-" << x;
+            cout << " millimeter " << x ;
             y=x/1000;
             break;
         }
         default:{
-            cout <<"\nError"; exit(0);
+            cout <<"Error" << endl; exit(0);
         }
     }
 
     switch (unit2) {//Из метров производится перевод в желаемую еденицу измерения
         case 1: {
             z=y/1000;
-            cout << "= Kilometer-" << z;
+            cout << "=" << z << " kilometer" << endl;
             break;
         }
         case 2: {
             z=y;
-            cout << "= meter-" << z;
+            cout << "=" << z << " meter" << endl;
             break;
         }
         case 3: {
             z=y*100;
-            cout << "= centimeter-" << z;
+            cout << "=" << z << " centimeter" << endl;
             break;
         }
         case 4: {
             z=y*1000;
-            cout << "= millimeter-" << z;
+            cout << "=" << z << " millimeter" << endl;
             break;
         }
         default:{
-            cout <<"\nError"; exit(0);
+            cout <<"Error" << endl; exit(0);
         }
     }
     return 0;
