@@ -6,20 +6,18 @@
 using namespace std;
 int main()
 {
-// Эта программа является конвертером расстояний
-// Сначала пользователь вводит тип длинны
     cout << "Enter the number of unit:\n1-Kilometer\n2-meter\n3-centimeter\n4-millimeter" << endl;
     int unit1, unit2;
 
     cin >>unit1;
-    cout << "enter the length: " << endl; //Потом пользователь должен ввести размер длинны
+    cout << "enter the length: " << endl; 
     double x, y, z;
     cin >>x;
 
     cout << "Enter the desired Unit:\n1-kilometer\n2-meter\n3-centimeter\n4-millimeter" << endl ;
     cin >>unit2;
 
-    switch (unit1) {//введенная ед. из. переводится в метры для удобства подсчета
+    switch (unit1) {
         case 1: {
             cout  << x << " kilometer";
             y=x*1000;
@@ -45,7 +43,7 @@ int main()
         }
     }
 
-    switch (unit2) {//Из метров производится перевод в желаемую еденицу измерения
+    switch (unit2) {
         case 1: {
             z=y/1000;
             cout << "=" << z << " kilometer" << endl;
